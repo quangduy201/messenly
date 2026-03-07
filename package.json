@@ -1,0 +1,92 @@
+{
+  "name": "messenly",
+  "version": "1.0.0",
+  "description": "Unofficial desktop wrapper for Facebook Messenger Web with native unread badge and notifications. Not affiliated with Meta.",
+  "main": "src/main.js",
+  "license": "MIT",
+  "productName": "Messenly",
+  "author": "Quang Duy <dinhduy2012003@gmail.com> (https://quangduy.id.vn)",
+  "homepage": "https://github.com/quangduy201/messenly",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quangduy201/messenly.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "dist": "electron-builder",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^40.8.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.messenly.desktop",
+    "productName": "Messenly",
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "quangduy201",
+        "repo": "messenly"
+      }
+    ],
+    "mac": {
+      "icon": "assets/icons/icon.icns",
+      "category": "public.app-category.social-networking",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "icon": "assets/icons/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Messenly"
+    },
+    "linux": {
+      "icon": "assets/icons/icon.png",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Network",
+      "executableName": "messenly",
+      "maintainer": "Quang Duy <dinhduy2012003@gmail.com>",
+      "synopsis": "Desktop wrapper for Facebook Messenger Web.",
+      "description": "Unofficial desktop wrapper for Facebook Messenger Web with native unread badge and notifications."
+    }
+  }
+}
