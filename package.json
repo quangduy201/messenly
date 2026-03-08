@@ -36,13 +36,6 @@
       "package.json"
     ],
     "asar": true,
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "quangduy201",
-        "repo": "messenly"
-      }
-    ],
     "mac": {
       "icon": "assets/icons/icon.icns",
       "category": "public.app-category.social-networking",
