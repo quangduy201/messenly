@@ -1,4 +1,7 @@
-# Messenly
+<p align="center">
+  <img src="assets/icons/icon.png" alt="Messenly icon" width="100">
+</p>
+<h1 align="center">Messenly</h1>
 
 Messenly is a lightweight, cross-platform desktop wrapper for Facebook Messenger Web with more native features.
 
