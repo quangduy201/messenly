@@ -67,7 +67,8 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Messenly"
+      "shortcutName": "Messenly",
+      "buildUniversalInstaller": false
     },
     "linux": {
       "icon": "assets/icons/icon.png",
